@@ -1,3 +1,8 @@
+rem little script to install the lft jar files to the maven local repo
+rem assumes UFT & LFT are installed on the machine.  If they aren't you can
+rem just remove the lines down to the first call.  open cmd and cd to the location
+rem of the lft jar files and then run the lines below.
+
 echo off
 
 echo #-------------------------------------------------------#
