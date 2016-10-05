@@ -13,17 +13,23 @@ for /f "delims=" %%a in ('wmic product where "Name='HP Unified Functional Testin
 cd %%a )
 cd SDK\Java
 
+rem Removing 12.53 format
 rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\com.hp.lft.report
 rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\com.hp.lft.sdk
 rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\com.hp.lft.unittesting
 rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\com.hp.lft.verifications
 
-call mvn install:install-file -Dfile="com.hp.lft.report.jar" -DgroupId=com.hp.lft -DartifactId=com.hp.lft.report -Dversion=12.53.0 -Dpackaging=jar
+rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\report
+rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\sdk
+rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\unittesting
+rmdir /S /Q %userprofile%\.m2\repository\com\hp\lft\verifications
 
-call mvn install:install-file -Dfile="com.hp.lft.sdk-standalone.jar" -DgroupId=com.hp.lft -DartifactId=com.hp.lft.sdk -Dversion=12.53.0 -Dpackaging=jar
+call mvn install:install-file -Dfile="com.hp.lft.report.jar" -DgroupId=com.hp.lft -DartifactId=report -Dversion=12.54.0 -Dpackaging=jar
 
-call mvn install:install-file -Dfile="com.hp.lft.sdk-javadoc.jar" -DgroupId=com.hp.lft -DartifactId=com.hp.lft.sdk -Dclassifier=javadoc -Dversion=12.53.0 -Dpackaging=jar
+call mvn install:install-file -Dfile="com.hp.lft.sdk-standalone.jar" -DgroupId=com.hp.lft -DartifactId=sdk -Dversion=12.54.0 -Dpackaging=jar
 
-call mvn install:install-file -Dfile="com.hp.lft.unittesting.jar" -DgroupId=com.hp.lft -DartifactId=com.hp.lft.unittesting -Dversion=12.53.0 -Dpackaging=jar
+call mvn install:install-file -Dfile="com.hp.lft.sdk-javadoc.jar" -DgroupId=com.hp.lft -DartifactId=sdk -Dclassifier=javadoc -Dversion=12.54.0 -Dpackaging=jar
 
-call mvn install:install-file -Dfile="com.hp.lft.verifications.jar" -DgroupId=com.hp.lft -DartifactId=com.hp.lft.verifications -Dversion=12.53.0 -Dpackaging=jar
+call mvn install:install-file -Dfile="com.hp.lft.unittesting.jar" -DgroupId=com.hp.lft -DartifactId=unittesting -Dversion=12.54.0 -Dpackaging=jar
+
+call mvn install:install-file -Dfile="com.hp.lft.verifications.jar" -DgroupId=com.hp.lft -DartifactId=verifications -Dversion=12.54.0 -Dpackaging=jar
