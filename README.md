@@ -6,19 +6,21 @@ UPDATE - **"Good news everyone!"** (homage to <a href="https://en.wikipedia.org/
 "Better news everyone!" (quote by Dave Flynn) the fix is simple.  This is assuming you are like most of our customers and do not have access to the HPE private Nexus OR you haven't added the LeanFT jars to your private Nexus or repo.
 
 The LFT 12.53 dependencies in the pom.xml file looked like
+```    
     <dependency>  
          <groupId>com.hp.lft</groupId>  
          <artifactId>com.hp.lft.sdk</artifactId>  
          <version>12.53.0</version>  
     </dependency>  
-
+```
 You should modify to look like
+```    
     <dependency>  
          <groupId>com.hp.lft</gorupId>  
          <artifactId>sdk</artifactId>  
          <version>12.54.0</version>  
     </dependency>  
-
+```
 In the end you should modify a total of 5 artifact entries (2 for sdk, report, unittesting, verification).  The above steps are only for projects you created before upgrading to 12.54.  All projects created using 12.54 should be fine.
 
 Once the above step is done, grab the "installLft2Maven.bat" file on GitHub - panama69/LFT  and then your local Maven repo will be fixed.
