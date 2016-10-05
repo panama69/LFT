@@ -1,13 +1,13 @@
 # LFT
 This simple file will install the LeanFT jar files into the .m2 local Maven repo for use since as of this writting the LeanFT jar files are not available on a public repo and using this method is better than adding them to your class path which makes your Maven project less portable.
 
-UPDATE - "Good news everyone!" (homage to Professor Farnsworth from Futurama)  The format for the Maven pom.xml file and the repo structure used by LeanFT 12.54 is different than was used for LeanFT 12.53.  This means LeanFT 12.53/Maven projects will break when you upgrade to LeanFT 12.54.
+UPDATE - **"Good news everyone!"** (homage to <a href="https://en.wikipedia.org/wiki/Professor_Farnsworth">Professor Farnsworth</a> from Futurama)  The format for the Maven pom.xml file and the repo structure used by LeanFT 12.54 is different than was used for LeanFT 12.53.  This means LeanFT 12.53/Maven projects will break when you upgrade to LeanFT 12.54.
 
 "Better news everyone!" (quote by Dave Flynn) the fix is simple.  This is assuming you are like most of our customers and do not have access to the HPE private Nexus OR you haven't added the LeanFT jars to your private Nexus or repo.
 
 The LFT 12.53 dependencies in the pom.xml file looked like
     <dependency>  
-         <groupId> com.hp.lft</groupId>  
+         <groupId>com.hp.lft</groupId>  
          <artifactId>com.hp.lft.sdk</artifactId>  
          <version>12.53.0</version>  
     </dependency>  
