@@ -33,3 +33,4 @@ call mvn install:install-file -Dfile="com.hp.lft.sdk-javadoc.jar" -DgroupId=com.
 call mvn install:install-file -Dfile="com.hp.lft.unittesting.jar" -DgroupId=com.hp.lft -DartifactId=unittesting -Dversion=12.54.0 -Dpackaging=jar
 
 call mvn install:install-file -Dfile="com.hp.lft.verifications.jar" -DgroupId=com.hp.lft -DartifactId=verifications -Dversion=12.54.0 -Dpackaging=jar
+
